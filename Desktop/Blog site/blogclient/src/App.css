@@ -1,0 +1,477 @@
+
+/*WHOLE HTML BODY*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*CSS GRID LAYOUT*/
+
+.navbar {
+  grid-area: navbar;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*NAVBAR STYLING STARTS*/
+
+.nav-links{
+  display: flex;
+  position: fixed;
+  left: 85%;
+  flex-direction: row-reverse;
+}
+
+.nav-links li{
+  background-color: rgb(255, 102, 0);
+  list-style: none;
+  padding: 10px 12px;
+}
+
+.nav-links li:hover {
+  background-color: rgb(0, 174, 255);
+}
+
+/*NAVBAR STYLING ENDS*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* BLOG LIST LOADING STARTS */ 
+
+  .loading {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    margin: 325px 810px;
+  }
+
+
+/* BLOG LIST LOADING ENDS */ 
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*BLOG LIST BOX STYLING STARTS*/
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'navbar '
+    'bloglist '
+    'bloglist '
+    'bloglist '
+    'bloglist ';
+  background-color: rgb(241, 241, 241);
+  padding: 20px;  
+  /* border: 1px solid blue */
+}
+
+.bloglist {
+  grid-area: bloglist;
+  margin: 0 160px;
+}
+
+.nav-home {
+  color: white;
+}
+
+.nav-blogs {
+  color: white;
+}
+
+.nav-newblog {
+  color: white;
+}
+
+.type-title{
+  color:rgb(0, 89, 255);
+  font-size: 3rem;
+  padding: 1% 0;
+}
+
+.bloglist-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+  background-color: rgb(235, 235, 235);
+  padding: 50px 50px;
+  grid-gap: 20px;
+  align-content: center;
+  justify-content: center;
+  /* border: solid 1px red; */
+}
+
+.list_item_blog {
+  max-height: 200px;
+  max-width: 300px;
+  /* border-left: 1px solid black; */
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform .8s;
+}
+
+.list_item_blog:hover {
+  box-shadow: 4px 4px 4px 4px #888888;
+  /* box-shadow: 10px 10px 8px grey; */  
+  transform: scale(1.10);
+  overflow-y: scroll;
+}
+
+.blog_title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  text-align: left;
+  color: black;
+}
+
+.blog_time {
+  float: right;
+  font-size: 10px;
+  color: rgb(114, 114, 114);
+}
+
+.list_item_blog > p {
+  text-decoration: none;
+}
+
+.blog_description {
+  font-size: 13px;
+  color: rgb(83, 83, 83);
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.blog_img {
+  max-width: 35%;
+  max-height: auto;    
+  float: left;
+  margin: 3px;
+  padding: 3px
+}
+
+/*BLOG LIST BOX STYLING ENDS */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* BLOG-DETAIL STARTS*/
+
+
+.blogdetail-inside {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 30px;
+  background-color:  rgb(231, 231, 231);
+  margin: 10px 270px;
+  padding: 10px;
+  /* border: solid 1px black; */
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 5rem;
+}
+
+.datetime {
+  text-align: right;
+  font-size: 13px;
+  color: rgb(90, 90, 90);
+}
+
+.type {
+  padding-left: 6px;
+  font-size: 15px;
+  color: rgb(107, 107, 107);
+  text-align: left;
+}
+
+.info {
+  white-space: pre-wrap;
+  font-size: 22px;
+  padding: 10px 250px;
+  text-align: justify;
+  background-color: rgb(231, 231, 231);
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto;
+}
+
+/*BLOG-DETAIL ENDS*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/*ADD-BLOG / NEW BLOG STARTS HERE*/
+
+
+.blogform {
+  margin: 50px 22%;
+  width: 1000px;
+  height: 1000px;
+  box-sizing: border-box;
+  background-color: rgb(135, 235, 160);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.blogform-content {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+
+input[type=text]{
+  width: 800px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+select {
+  padding: 12px;
+  width: 825px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 800px;
+  height: 500px;
+}
+
+label {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding : 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: sandybrown;
+  color: royalblue;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(240, 136, 45);
+}
+
+.col-25 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.addedBlog {
+  display: flex;
+  position: fixed;
+  top:0;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+  width: 7%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  margin: 1%;
+}
+
+/*ADD-BLOG / NEW BLOG ENDS HERE*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*EDIT-BLOG START*/
+
+
+.editForm {
+  /* height: 100%;
+  width: 40%; */
+  margin: auto;
+  padding: 0 17%;
+  /* border: 1px solid black; */
+}
+
+.editForm > input[type='submit'] {
+  margin: 10px;
+}
+
+.edit-btn {
+  border: none;
+  background-color: rgb(0, 153, 255);
+  color: black;
+  border-radius: 7px;
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover{
+  border: none;
+  background-color: rgba(0, 110, 255, 0.829);
+}
+
+/*EDIT-BLOG ENDS*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* SIGNIN - SIGNUP STARTS  */
+
+#login {
+  /* border: 1px solid black; */
+  height: 100%;
+  background-color: rgb(235, 235, 235);
+}
+
+.imagecontainer >img{
+  margin: 5% 46%;
+  grid-area: bloglist;
+  height: 150px;
+  width: 150px;
+}
+
+.signin-container {
+  padding: 0 20% 12% 20%;
+  margin: 0 20%;
+}
+
+.signin-container > input[type='password'],input[type='text'] {
+ 
+  width: 90%;
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.signin-container >button {
+  border: none;
+  background-color: rgb(12, 196, 12);
+  border-radius: 5px;
+  color:white;
+  margin: 10px 10px 10px 0;  
+  padding: 10px;
+  cursor: pointer;
+}
+
+.signin-container >button:hover{
+  background-color: rgb(1, 146, 32);
+  color: rgb(255, 255, 255);
+}
+
+.invalidUser {
+  color: red;
+}
+
+@media screen and (max-width: 300px) {
+  .signin-container{
+    display: block;
+    float: none;
+  }
+}
+
+/* SIGNIN - SIGNUP ENDS  */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* SIGN-OUT BUTTON STARTS */
+
+.signOutButton{
+  position: fixed;
+  left: 79%;
+  border: none;
+  height: 40px;
+  width: 100px;
+  background-color: rgb(151, 151, 151);
+  color: black;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.signOutButton:hover{
+  background-color: gray;
+}
+
+.username {
+  text-transform: capitalize;
+  color:rgb(8, 121, 8);
+  font-size: 2rem;
+  padding: 0 1%;
+  float: left;
+}
+
+.yourblog {
+  padding: 1% 0 0 1%;
+  color: rgb(0, 12, 173) ;
+  font-size: 1.5rem;
+}
+
+/* SIGN-OUT BUTTON ENDS */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> *
+
+/* ERROR PAGE STARTS*/
+
+.Error-container {
+  font-size: 0.5in;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+  height: 95.5vh;
+  /* border: 1px solid black; */
+}
+
+.error-box {
+  
+  border-radius: 40px;
+  border: 10px solid black;
+  padding: 5% 10%;
+  
+}
+
+.err-signin-signup {
+  font-size: 17px;
+  border: none;
+  color: black;
+  margin: 4% 10%;
+  background-color: rgb(43, 226, 104);
+  height: 5vh;
+  width: 10vh;
+  border-radius: 6px;
+}
+
+.err-signin-signup:hover {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color:rgb(37, 163, 79) ;
+}
+
+
+/* ERROR PAGE ENDS*/
